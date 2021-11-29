@@ -10,11 +10,14 @@ import java.io.File
 import kotlin.system.exitProcess
 
 if (args.isEmpty()) {
-    println("Please, provide the day number you want to create")
-    exitProcess(1)
+    println("Please, provide the day number you want to create:")
+}
+var day: String = args.getOrElse(0) { readLine() ?: "" }
+while (day.toIntOrNull() !in 1..25) {
+    println("Please provide a valid number (1..25):")
+    day = readLine() ?: ""
 }
 
-val day = args[0]
 val paddedDay = day.toString().padStart(2, '0')
 
 val dir = File("src/day$paddedDay")
