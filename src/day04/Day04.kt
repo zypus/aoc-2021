@@ -2,6 +2,8 @@ package day04
 
 import AoCTask
 
+// https://adventofcode.com/2021/day/4
+
 data class BingoCell(val number: Int, val marked: Boolean = false)
 
 data class BingoBoard(val rows: List<List<BingoCell>>) {
