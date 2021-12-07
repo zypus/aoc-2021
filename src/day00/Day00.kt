@@ -2,6 +2,8 @@ package day00
 
 import AoCTask
 
+// <link>
+
 fun part1(input: List<String>): Int {
     return input.size
 }

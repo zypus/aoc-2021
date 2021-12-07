@@ -28,7 +28,7 @@ if (dir.exists()) {
     val templateDir = File("src/day00")
     templateDir.copyRecursively(dir)
     dir.listFiles().forEach { file ->
-        val newContent = file.readText().replace("00", "$paddedDay")
+        val newContent = file.readText().replace("00", "$paddedDay").replace("<link>", "https://adventofcode.com/2021/day/${day}")
         val newName = file.name.replace("00", paddedDay)
         val newFile = file.resolveSibling(newName)
         newFile.writeText(newContent)
