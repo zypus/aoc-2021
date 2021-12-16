@@ -17,6 +17,8 @@ data class AoCTask(val day: String) {
         readInput(day.replaceFirstChar { it.uppercase() } + "_test")
     }
 
+    fun readTestInput(n: Int) = readInput(day.replaceFirstChar { it.uppercase() } + "_test$n")
+
 }
 
 /**
