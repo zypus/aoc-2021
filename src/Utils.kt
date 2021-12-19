@@ -26,6 +26,10 @@ data class AoCTask(val day: String) {
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
 
-data class Vector2(val x: Int = 0, val y: Int = 0)
+data class Vector2(val x: Int = 0, val y: Int = 0) {
+    override fun toString(): String {
+        return "($x,$y)"
+    }
+}
 
 operator fun Vector2.plus(other: Vector2) = Vector2(x + other.x, y + other.y)
