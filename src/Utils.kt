@@ -30,6 +30,14 @@ data class Vector2(val x: Int = 0, val y: Int = 0) {
     override fun toString(): String {
         return "($x,$y)"
     }
+
+    companion object {
+        val LEFT = Vector2(-1, 0)
+        val RIGHT = Vector2(1, 0)
+        val UP = Vector2(0, -1)
+        val DOWN = Vector2(0, 1)
+    }
 }
 
 operator fun Vector2.plus(other: Vector2) = Vector2(x + other.x, y + other.y)
+operator fun Vector2.minus(other: Vector2) = Vector2(x - other.x, y - other.y)
