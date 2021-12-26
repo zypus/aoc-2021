@@ -32,6 +32,7 @@ data class Vector2(val x: Int = 0, val y: Int = 0) {
     }
 
     companion object {
+        val ZERO = Vector2(0, 0)
         val LEFT = Vector2(-1, 0)
         val RIGHT = Vector2(1, 0)
         val UP = Vector2(0, -1)
